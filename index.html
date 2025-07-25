@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+    }
+
+    .hero .signature-line {
+      margin-top: 2rem;
+      font-size: 1rem;
+      font-style: italic;
+      animation: fadeInUp 2.5s ease forwards;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+
+    .blob {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle at 30% 30%, #ff6ec4, #7873f5);
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.6;
+      animation: floatBlob 10s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .signature {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      opacity: 0.8;
+      z-index: 3;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatBlob {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-60%, -40%) scale(1.1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p, .hero .signature-line {
+        font-size: 1rem;
+      }
+
+      .signature {
+        width: 70px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="blob"></div>
+    <div class="content">
+      <h1>Ignite Your Imagination</h1>
+      <p>Design. Develop. Dream. All in one space.</p>
+      <div class="signature-line">– BHAVIK</div>
+    </div>
+    <img src="CEC7E97C-2F43-4E78-A911-7D12A14D47FE.jpeg" alt="Signature" class="signature" />
+  </section>
+</body>
+</html>
